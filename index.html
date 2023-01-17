@@ -22,7 +22,8 @@
         // Send event data to parent window using postMessage
         window.parent.postMessage('event:click-button', '*');
         // Send data to GTM
-        dataLayer.push({'event': 'click-button'});
+        //dataLayer.push({'event': 'click-button'});
+        gtag('event', 'click-button', { 'event_category': 'login', 'event_label': 'login', 'value': 'no login'})
     });
   </script>
   </body>
